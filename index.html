@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casa Viva | Dashboard inteligente</title>
+    <meta name="description" content="Dashboard demo de casa inteligente inspirado en ecosistemas de automatización residencial.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegación principal">
+        <a class="brand" href="#" aria-label="Casa Viva">
+          <span class="brand-mark">CV</span>
+          <span>
+            <strong>Casa Viva</strong>
+            <small>Smart home demo</small>
+          </span>
+        </a>
+
+        <nav class="nav-list" aria-label="Secciones">
+          <a class="nav-item active" href="#"><i data-lucide="layout-dashboard"></i><span>Panel</span></a>
+          <a class="nav-item" href="#"><i data-lucide="home"></i><span>Habitaciones</span></a>
+          <a class="nav-item" href="#"><i data-lucide="zap"></i><span>Energía</span></a>
+          <a class="nav-item" href="#"><i data-lucide="shield-check"></i><span>Seguridad</span></a>
+          <a class="nav-item" href="#"><i data-lucide="sliders-horizontal"></i><span>Escenas</span></a>
+        </nav>
+
+        <div class="sidebar-card">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Sistema estable</strong>
+            <p>12 dispositivos conectados</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Viernes, 19 de junio</p>
+            <h1>Tu hogar, de un vistazo</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" aria-label="Buscar"><i data-lucide="search"></i></button>
+            <button class="icon-button" type="button" aria-label="Notificaciones"><i data-lucide="bell"></i></button>
+            <button class="profile-button" type="button">
+              <span class="avatar">J</span>
+              <span>Juan</span>
+            </button>
+          </div>
+        </header>
+
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Modo hogar activo</p>
+            <h2>Living, cocina y exterior sincronizados.</h2>
+            <p>Temperatura confortable, consumo bajo y seguridad perimetral sin alertas.</p>
+            <div class="hero-actions">
+              <button class="primary-button" type="button"><i data-lucide="play"></i> Activar escena</button>
+              <button class="secondary-button" type="button"><i data-lucide="settings-2"></i> Ajustar</button>
+            </div>
+          </div>
+          <img src="assets/smart-home-hero.png" alt="Ilustración de una casa inteligente con controles ambientales">
+        </section>
+
+        <section class="metrics-grid" aria-label="Metricas principales">
+          <article class="metric-card">
+            <div class="metric-icon temperature"><i data-lucide="thermometer"></i></div>
+            <span>Temperatura</span>
+            <strong>22.4 C</strong>
+            <small>Ideal para la noche</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon energy"><i data-lucide="activity"></i></div>
+            <span>Consumo</span>
+            <strong>1.8 kW</strong>
+            <small>18% menos que ayer</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon air"><i data-lucide="wind"></i></div>
+            <span>Calidad de aire</span>
+            <strong>92%</strong>
+            <small>Ventilación óptima</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-icon secure"><i data-lucide="lock"></i></div>
+            <span>Seguridad</span>
+            <strong>Armada</strong>
+            <small>Sin movimiento externo</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel room-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Habitaciones</p>
+                <h2>Ambientes principales</h2>
+              </div>
+              <button class="text-button" type="button">Ver todos</button>
+            </div>
+
+            <div class="rooms">
+              <article class="room-card active">
+                <div>
+                  <i data-lucide="sofa"></i>
+                  <h3>Living</h3>
+                  <p>5 dispositivos</p>
+                </div>
+                <strong>22 C</strong>
+              </article>
+              <article class="room-card">
+                <div>
+                  <i data-lucide="chef-hat"></i>
+                  <h3>Cocina</h3>
+                  <p>3 dispositivos</p>
+                </div>
+                <strong>21 C</strong>
+              </article>
+              <article class="room-card">
+                <div>
+                  <i data-lucide="bed-double"></i>
+                  <h3>Dormitorio</h3>
+                  <p>4 dispositivos</p>
+                </div>
+                <strong>20 C</strong>
+              </article>
+              <article class="room-card">
+                <div>
+                  <i data-lucide="trees"></i>
+                  <h3>Exterior</h3>
+                  <p>2 dispositivos</p>
+                </div>
+                <strong>14 C</strong>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel climate-panel">
+            <div class="section-heading compact">
+              <div>
+            <p class="eyebrow">Clima</p>
+                <h2>Termostato</h2>
+              </div>
+              <button class="icon-button small" type="button" aria-label="Opciones de termostato"><i data-lucide="more-horizontal"></i></button>
+            </div>
+            <div class="thermostat" role="img" aria-label="Termostato en 22 grados">
+              <div class="thermostat-ring">
+                <span id="ringTemp">22</span>
+                <small>C</small>
+              </div>
+            </div>
+            <div class="stepper" aria-label="Ajuste de temperatura">
+              <button type="button" data-temp="-1"><i data-lucide="minus"></i></button>
+              <span id="targetTemp">22 C</span>
+              <button type="button" data-temp="1"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+
+          <div class="panel energy-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Energía</p>
+                <h2>Consumo de hoy</h2>
+              </div>
+              <span class="pill">Bajo</span>
+            </div>
+            <div class="bar-chart" aria-label="Gráfico de consumo por hora">
+              <span style="--h: 38%"></span>
+              <span style="--h: 44%"></span>
+              <span style="--h: 30%"></span>
+              <span style="--h: 58%"></span>
+              <span style="--h: 76%"></span>
+              <span style="--h: 62%"></span>
+              <span style="--h: 45%"></span>
+              <span style="--h: 68%"></span>
+              <span style="--h: 52%"></span>
+              <span style="--h: 35%"></span>
+            </div>
+            <div class="energy-summary">
+              <span><strong>13.2</strong> kWh</span>
+              <span><strong>$ 1.840</strong> estimado</span>
+            </div>
+          </div>
+
+          <div class="panel scenes-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Escenas</p>
+                <h2>Automatizaciones</h2>
+              </div>
+            </div>
+            <div class="scene-list">
+              <button class="scene-button active" type="button"><i data-lucide="moon"></i><span>Noche tranquila</span></button>
+              <button class="scene-button" type="button"><i data-lucide="sun"></i><span>Buenos días</span></button>
+              <button class="scene-button" type="button"><i data-lucide="film"></i><span>Cine</span></button>
+              <button class="scene-button" type="button"><i data-lucide="door-closed"></i><span>Salir de casa</span></button>
+            </div>
+          </div>
+
+          <div class="panel devices-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Dispositivos</p>
+                <h2>Controles rápidos</h2>
+              </div>
+            </div>
+            <div class="device-list">
+              <label class="device-row">
+                <span><i data-lucide="lightbulb"></i> Luces del living</span>
+                <input type="checkbox" checked>
+              </label>
+              <label class="device-row">
+                <span><i data-lucide="camera"></i> Cámara jardín</span>
+                <input type="checkbox" checked>
+              </label>
+              <label class="device-row">
+                <span><i data-lucide="speaker"></i> Audio cocina</span>
+                <input type="checkbox">
+              </label>
+              <label class="device-row">
+                <span><i data-lucide="droplets"></i> Riego exterior</span>
+                <input type="checkbox">
+              </label>
+            </div>
+          </div>
+
+          <div class="panel activity-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Actividad</p>
+                <h2>Últimos eventos</h2>
+              </div>
+            </div>
+            <ol class="timeline">
+              <li><span>19:12</span> Se ajustó la luz del living al 68%.</li>
+              <li><span>18:48</span> Sensor exterior sin movimiento.</li>
+              <li><span>18:20</span> Termostato cambió a modo eco.</li>
+              <li><span>17:55</span> Puerta principal bloqueada.</li>
+            </ol>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
